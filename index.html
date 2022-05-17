@@ -7,20 +7,81 @@
         <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     </head>
     <body style="padding: 0px; margin: 0px; margin-right: 0px;width: 100%;">
-        <div id="menu" class="menu_navegacion">
-            <nav class="texto_titulo_medio">
-                <a href="" style="padding: 25px;">Inicio</a>
-                <a href="" style="padding: 25px;">Novedades</a>
-                <a href="" style="padding: 25px;">Reseñas</a>
-                <a href="" style="padding: 25px;">Contacto</a>
-            </nav>
+        <div style="height: 25px; width:100%; background-color: #282828;color: white;">
+            <div style="float:left;width: 50%;"></div>
+            <div style="float:right;width: 50%;"></div>
         </div>
-        <div id="slider">
-            <img src="Slider.jpg" alt="Slider de ejemplo" width="100%">
+        <br style="color: white;">
+        <div>
+            <ul>
+                <li><a href="#inicio" class="active"><b>Inicio</b></a></li>
+                <li><a href="#novedades"><b>Novedades</b></a></li>
+                <li><a href="#reseñas"><b>Reseñas</b></a></li>
+                <li><a href="#contacto"><b>Contacto</b></a></li>
+            </ul>
         </div>
-        <div id="carrusel">
-            <h1 class="texto_titulo_mayor">Mas Vendido</h1>
+
+        <br style="color: white;">
+        
+        <div id="content">
+            <div id="slider">
+                <img src="images/Slider.jpg" alt="Slider de ejemplo" width="100%">
+            </div>
+            <br style="color: white;">
+            <br style="color: white;">
+            <div>
+                <div class="clearfix" style="margin-bottom: 50px;">
+                    <div class="box" style="background-image: url('images/box1.jpg');height: 365px;background-repeat: no-repeat;background-size: cover;margin: 10px;">
+                        <div style="height: 275px;display: table-cell;vertical-align: bottom;padding: 10px;"><h1>Nuevos <br> Lanzamientos</h1></div>
+                        <div><button class="button" style="vertical-align:middle;background-color: #8F2224;"><span>ver más </span></button></div>
+                    </div>
+                    <div class="box" style="background-image: url('images/box2.jpg');height: 365px;background-repeat: no-repeat;background-size: cover;margin: 10px;">
+                        <div style="height: 275px;display: table-cell;vertical-align: bottom;padding: 10px;"><h1>Comprar <br> Ahora!</h1></div>
+                        <div><button class="button" style="vertical-align:middle;background-color: #2C8A6B;"><span>ver más </span></button></div>
+                    </div>
+                    <div class="box" style="background-image: url('images/box3.jpg');height: 365px;background-repeat: no-repeat;background-size: cover;margin: 10px;">
+                        <div style="height: 275px;display: table-cell;vertical-align: bottom;padding: 10px;"><h1>Top <br> Lecturas</h1></div>
+                        <div ><button class="button" style="vertical-align:middle;background-color: #3076D2;"><span>ver más </span></button></div>
+                    </div>
+                </div>
+            </div>
+            <br style="color: white;">
+            <hr color="#db2d31"width=35%>
+            <div class="texto_titulo_mayor"><h1 style="text-align:center; margin-top: 50px;">Favorito del Mes</h1></div>    
+            <div style="background-image: url('images/fondo-favorito_mes.png');width: 100%;overflow: hidden;margin: 10px;background-repeat: no-repeat;margin-top: 75px;">
+                <div style="float: left; width: 50%;height: 100%; align-content: center; display: flex; align-items: center; justify-content: center;"><img src="images/libro_fav.png" alt="libro_fav"></div>
+                <div style="float: left; width: 40%; background-color: white;margin-top: 60px;height: 450px;border-radius: 20px;padding: 20px;text-align: center;color:black;font-size: 15px;"><h3>Cómo explicar la física cuántica con un gato zombi</h3><hr color= "#db2d31" width="75px"><br>¿Sabías que el teletransporte es real? ¿Que a veces un electrón tiene probabilidades de atravesar una pared? ¿Que dos partículas pueden influenciarse mutuamente aunque estén a años luz de distancia? ¿Y que las partículas cuánticas son como Clark Kent y disimulan sus poderes cuando los científicos las están observando?<br><br>
+
+                    En Cómo explicar la física cuántica con un gato zombi descubrirás que, aunque no lo parezca, la física cuántica está por todas partes en nuestra vida cotidiana. Y además aprenderás...<br><br>
+                    
+                    ...¡los principios más locos y flipantes de la física cuántica!<br>
+                    
+                    ...¡experimentos low cost que puedes hacer en tu casa!<br>
+                    
+                    ...que los científicos están un poco pallá, ¿lo sabías?<br>
+                    
+                    ...y que los gatos tampoco son muy normales que digamos...<br><br>
+                    <h4>Big Van, científicos sobre ruedas</h4>
+                </div>
+            </div>
         </div>
+
+        <div style="margin: 80px;" class="texto_titulo_mayor">
+            <hr color= "#db2d31" width="35%">
+            <h1 style="text-align:center; margin-top: 50px;">Librerías Recomendadas</h1>
+        </div>
+        <div>
+            <div class="flex-container" style="margin: 45px;">
+
+                <div style="flex-grow: 1;margin-left: 65px;height: 150px; width: 30%;background-repeat: no-repeat;"><a href="https://www.librenta.com/" target="_blank"><img src="images/L1.jpg" alt="Librenta Librería"></a></div>
+                <div style="flex-grow: 1;margin-left: 65px;height: 150px; width: 30%;background-repeat: no-repeat;"><a href="https://www.cuspide.com/" target="_blank"><img src="images/L2.jpg" alt="Librería Cúspide"></div>
+                <div style="flex-grow: 1;margin-left: 65px;height: 150px; width: 30%;background-repeat: no-repeat;"><a href="https://www.libreriahernandez.com/" target="_blank"><img src="images/L3.jpg" alt="Hernandez Librería"></div>
+                <div style="flex-grow: 1;margin-left: 65px;height: 150px; width: 30%;background-repeat: no-repeat;"><a href="https://colecciones.clarin.com/" target="_blank"><img src="images/L4.jpg" alt="Colecciones Clarín"></div>
+                <div style="flex-grow: 1;margin-left: 65px;height: 150px; width: 30%;background-repeat: no-repeat;"><a href="https://www.sbs.com.ar/" target="_blank"><img src="images/L5.jpg" alt="SBS Librería"></div>
+            </div>
+        </div>
+        
+        
         <div id="footer" class="footer">
             <table style="width: 100%;">
                 <tr>
@@ -29,7 +90,7 @@
                     <th style="padding: 20px;">Categorías</th>
                 </tr>
                 <tr>
-                    <td rowspan="3"><img src="cafe-logo.png" alt="Loguito de Cafe" width="100" height="100"></td>
+                    <td rowspan="3"><img src="images/cafe-logo.png" alt="Loguito de Cafe" width="100" height="100"></td>
                     <td style="font-size: 14px;color: #dddddd;font-weight: 100;">Novedades</td>
                     <td style="font-size: 14px;color: #dddddd;font-weight: 100;">Ciencia Ficción</td>
                 </tr>

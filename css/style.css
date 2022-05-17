@@ -1,23 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    font-family: "Sora";
+    }
 
 .texto_titulo_medio{
     font-family: "Sora";
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font:900;
     color: black;
-}
-
-.menu_navegacion{
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #dddddd;
-    text-align: center; 
 }
 
 .texto_titulo_mayor{
     font-family: "Sora";
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 600;
     color: black;
 }
@@ -30,4 +26,109 @@
     font-weight: 600;
     text-align: center;
     color: white;
+}
+
+/*tres boxes*/
+
+* {
+box-sizing: border-box;
+}
+    
+.box {
+float: left;
+width: 32%;
+padding: 5px;
+}
+    
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+
+/* menu*/
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: white;
+}
+  
+li {
+float: left;
+}
+  
+li a {
+display: inline-block;
+color: black;
+text-align: center;
+padding: 20px 20px;
+text-decoration: none;
+}
+
+li a:hover {
+color:  #f65d4e;
+}
+
+.active {
+color: #db2d31;
+}
+
+/*boton tres box*/
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    width: 100px
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+  
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span {
+    padding-right: 25px;
+}
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/*Zona librerias recomendas*/
+
+.flex-container {
+    display: flex;
+    align-items: stretch;
+    background-color: #f1f1f1;
+}
+  
+.flex-container > div {
+    background-color: white;
+    color: white;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
 }
