@@ -1,8 +1,6 @@
  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
 
-* {
-    font-family: "Sora";
-    }
+
 
 .texto_titulo_medio{
     font-family: "Sora";
@@ -38,12 +36,28 @@ box-sizing: border-box;
 float: left;
 width: 32%;
 padding: 5px;
+height: 365px;
+background-repeat: no-repeat;
+background-size: cover;
+margin: 10px;
 }
     
 .clearfix::after {
 content: "";
 clear: both;
 display: table;
+}
+
+.box-descripcion{
+    height: 275px;
+    display: table-cell;
+    vertical-align: bottom;
+    padding: 10px;
+}
+
+.box-descripcion > h1{
+    font-family: "Sora";
+    color: white;
 }
 
 /* menu*/
@@ -61,6 +75,7 @@ float: left;
 }
   
 li a {
+font-family: "Sora";
 display: inline-block;
 color: black;
 text-align: center;
@@ -79,6 +94,7 @@ color: #db2d31;
 /*boton tres box*/
 
 .button {
+    font-family: "Sora";
     display: inline-block;
     border-radius: 4px;
     border: none;
@@ -86,7 +102,7 @@ color: #db2d31;
     text-align: center;
     font-size: 16px;
     padding: 10px;
-    width: 100px
+    width: 120px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
@@ -131,4 +147,94 @@ color: #db2d31;
     margin: 10px;
     text-align: center;
     line-height: 75px;
+}
+
+.logos-librerias{
+    flex-grow: 1;
+    margin-left: 65px;
+    height: 150px; 
+    width: 30%;
+    background-repeat: no-repeat;
+}
+
+.fuente-14w{
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.color-dd{
+    color: #dddddd;
+}
+
+/* Zona Libro Favorito*/
+
+.fondo-contenido {
+    width: 100%;
+    overflow: hidden;
+    margin: 10px;
+    background-repeat: no-repeat;
+    margin-top: 75px;
+}
+
+.seccion-imagen-izquierda {
+    float: left; 
+    width: 50%;
+    height: 100%; 
+    align-content: center; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.seccion-texto-derecha {
+    font-family: "Sora";
+    float: left; 
+    width: 40%; 
+    background-color: white;
+    margin-top: 60px;
+    height: 450px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color:black;
+    font-size: 15px;
+}
+
+/*Blog Reseña*/
+
+
+.flex-contenido {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+}
+
+.flex-item-left {
+    background-color: white;
+    padding: 10px;
+    flex: 33%;
+}
+
+.flex-item-center {
+    background-color: white;
+    padding: 10px;
+    flex: 33%;
+}
+
+.flex-item-right {
+    background-color: white;
+    padding: 10px;
+    flex: 33%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+    .flex-contenido {
+    flex-direction: column;
+    }
 }
