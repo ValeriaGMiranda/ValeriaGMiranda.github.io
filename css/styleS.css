@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/*Esqueleto general*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Sora";
+    font-size: 18px;
+    min-height: 100%;
+}
+
+.grid-container > *{
+    padding: 5px;
+    text-align: center;
+}
+
+.header {
+    grid-area: header;
+    background-color:#282828;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: white;
+}
+
+.main {
+    grid-area: main;
+    background-color: white;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #282828;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "footer";
+}
+
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template: 
+        "header header" 45px
+        "navbar navbar" 110px
+        "main   main"   auto
+        "footer footer" 100px /
+        200px   auto;
+    }
+}
+
+@media (min-width: 900px) {
+    .grid-container {
+        grid-template: 
+        "header header header" 45px
+        "navbar navbar navbar" 110px
+        "main   main   main"   auto
+        "footer footer footer" 160px /
+        200px   auto    200px;
+    }
+}
+
+/*Tamaños de fuentes*/
+
+.texto_titulo_medio{
+    font-family: "Sora";
+    font-size: 18px;
+    font:900;
+    color: black;
+}
+
+.texto_titulo_mayor{
+    font-family: "Sora";
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+}
+
+/*Zona flexbox*/
+
+.flex-container {
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px white;
+}
+
+.flex-container > * {
+    padding: 10px;
+    margin: 5px;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center ;
+}
+
+/*Zona header*/
+
+.flex-container-header {
+    background-color: #282828;
+    border-radius: 10px;
+    border: solid 2px #282828;
+}
+
+.flex-container-header > * {
+    
+    border: solid 1px #282828;
+    border-radius: 10px;
+    background-color:#282828;
+}
+
+.flex-container-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: center ;
+}
+
+/*Elementos menu*/
+
+.logo {
+    height: 100px;
+}
+
+.inicio {
+    height: 40px;
+    margin-left: auto;
+}
+
+.novedades {
+    height: 40px;
+}
+
+.reseñas {
+    height: 40px;
+}
+
+.contacto {
+    height: 40px;
+}
+
+.active {
+    color: #db2d31;
+
+}
+
+div > a {
+    font-family: "Sora";
+    display: inline-block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+div > a:hover {
+    color:  #db2d31;   
+}
+
+
+/*Zona tres boxes*/
+
+.box {
+float: left;
+width: 32%;
+padding: 5px;
+height: 365px;
+background-repeat: no-repeat;
+background-size: cover;
+margin: 9px;
+}
+        
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+    
+.box-descripcion{
+    height: 275px;
+    display: table-cell;
+    vertical-align: bottom;
+    padding: 10px;
+}
+    
+.box-descripcion > h1{
+    font-family: "Sora";
+    color: white;
+}
+
+/*Botones de boxes*/
+
+.button {
+    font-family: "Sora";
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+      
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+      
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+      
+.button:hover span {
+    padding-right: 25px;
+}
+      
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* Zona Libro Favorito*/
+
+.fondo-contenido {
+    overflow: hidden;
+    margin: 10px;
+    background-repeat: no-repeat;
+    margin-top: 75px;
+}
+
+.seccion-imagen-izquierda {
+    float: left; 
+    width: 50%;
+    height: 100%; 
+    align-content: center; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.seccion-texto-derecha {
+    font-family: "Sora";
+    float: left; 
+    width: 40%; 
+    background-color: white;
+    margin-top: 60px;
+    height: 450px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color:black;
+    font-size: 15px;
+    overflow: auto;
+}
+
+.flex-container-footer {
+    background-color: #282828;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center ;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 10px;
+}
+
+/*Blog Reseña*/
+
+.flex-container-reseña {
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px white;
+}
+
+.flex-container-reseña > * {
+    padding: 10px;
+    margin: 5px;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.flex-container-reseña {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center ;
+}
+
+

@@ -1,108 +1,100 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
     <head>
-        <title>Trabajo Final</title>
-        <meta charset="UTF-8">  
-        <link rel="stylesheet" href="css/style.css">  
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio</title>
+        <link rel="stylesheet" href="css/styleS.css">
         <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     </head>
-    <body style="padding: 0px; margin: 0px; margin-right: 0px;width: 100%;">
-        <div style="height: 25px; width:100%; background-color: #282828;color: white;">
-            <div style="float:left;width: 50%;"></div>
-            <div style="float:right;width: 50%;"></div>
-        </div>
-        <br style="color: white;">
-        <div>
-            <ul>
-                <li><a href="index.html" class="active"><b>Inicio</b></a></li>
-                <li><a href="novedades.html"><b>Novedades</b></a></li>
-                <li><a href="blog.html"><b>Reseñas</b></a></li>
-                <li><a href="contacto.html"><b>Contacto</b></a></li>
-            </ul>
-        </div>
-
-        <br style="color: white;">
-        
-        <div id="content">
-            <div id="slider">
-                <img src="images/Slider.jpg" alt="Slider de ejemplo" width="100%" height="625px">
+    <body class="grid-container">
+        <header class="header">
+            <div class="flex-container-header">
+                <div>
+                    <a href="" style= "color: white;"><h6>¡Suscríbete para más noticias!</h6></a><br>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="facebook" width="25px" height="25px"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="instagram" width="25px" height="25px"></a>
+                    <a href="https://web.whatsapp.com/" target="_blank"><img src="images/whatsapp.png" alt="whatsapp" width="25px" height="25px"></a>
+                </div>
             </div>
-            <br style="color: white;">
-            <br style="color: white;">
-            <div>
+        </header>
+        <nav class="navbar">
+            <div class="flex-container" style="overflow: hidden;">
+                <div class="logo"><img src="images/ProyectoFinal.png" alt="Logo Sitio" width="100" height="82"></div>
+                <div class="inicio active"><a href="index.html"><b>Inicio</b></a></div>
+                <div class="novedades"><a href="novedades.html"><b>Novedades</b></a></div>
+                <div class="reseñas"><a href="blog.html"><b>Reseñas</b></a></div>
+                <div class="contacto"><a href="contacto.html"><b>Contacto</b></a></div>
+            </div>
+        </nav>
+        <article class="main">
+            <div class="flex-container-box">
+                <div><img src="images/Slider.jpg" alt="" width="100%" height="615px"></div>
                 <div class="clearfix" style="margin-bottom: 50px;">
-                    <div class="box" style="background-image: url('images/box1.jpg');">
-                        <div class="box-descripcion"><h1>Nuevos <br> Lanzamientos</h1></div>
-                        <div><button class="button" style="vertical-align:middle;background-color: #8F2224;"><span>ver más </span></button></div>
+                    <div class="box" style="background-image: url(images/box1.jpg);">
+                        <div class="box-descripcion" style="text-align:left;"><h1>Nuevos <br> Lanzamientos</h1></div>
+                        <div><button class="button" style="vertical-align:middle; background-color: #8F2224;"><span>ver más </span></button></div>
                     </div>
-                    <div class="box" style="background-image: url('images/box2.jpg');">
-                        <div class="box-descripcion"><h1>Comprar <br> Ahora!</h1></div>
-                        <div><button class="button" style="vertical-align:middle;background-color: #2C8A6B;"><span>ver más </span></button></div>
+                    <div class="box" style="background-image: url(images/box2.jpg);">
+                        <div class="box-descripcion" style="text-align:left;"><h1>Comprar <br> Ahora!</h1></div>
+                        <div><button class="button" style="vertical-align:middle; background-color: #2C8A6B;"><span>ver más </span></button></div>
                     </div>
-                    <div class="box" style="background-image: url('images/box3.jpg');">
-                        <div class="box-descripcion"><h1>Top <br> Lecturas</h1></div>
-                        <div ><button class="button" style="vertical-align:middle;background-color: #3076D2;"><span>ver más </span></button></div>
+                    <div class="box" style="background-image: url(images/box3.jpg);">
+                        <div class="box-descripcion" style="text-align:left;"><h1>Top <br> Lecturas</h1></div>
+                        <div ><button class="button" style="vertical-align:middle; background-color: #3076D2;"><span>ver más </span></button></div>
+                    </div>
+                </div>
+                <hr color="#db2d31" width="35%" style="margin:auto;">
+                <div class="texto_titulo_mayor"><h1 style="text-align:center; margin-top: 50px;">Favorito del Mes</h1></div>
+                <div class="fondo-contenido" style="background-image: url('images/fondo-favorito_mes.png');">
+                    <div class="seccion-imagen-izquierda"><img src="images/libro_fav.png" alt="libro_fav"></div>
+                    <div class="seccion-texto-derecha"><h3>Cómo explicar la física cuántica con un gato zombi</h3><br><hr color= "#db2d31" width="100px" style="margin:auto;"><br>¿Sabías que el teletransporte es real? 
+                        ¿Que a veces un electrón tiene probabilidades de atravesar una pared? ¿Que dos partículas pueden influenciarse mutuamente aunque estén a años luz de distancia? 
+                        ¿Y que las partículas cuánticas son como Clark Kent y disimulan sus poderes cuando los científicos las están observando?<br><br>
+    
+                        En Cómo explicar la física cuántica con un gato zombi descubrirás que, aunque no lo parezca, la física cuántica está por todas partes en nuestra vida cotidiana. Y además aprenderás...<br><br>
+                        
+                        ...¡los principios más locos y flipantes de la física cuántica!<br>
+                        
+                        ...¡experimentos low cost que puedes hacer en tu casa!<br>
+                        
+                        ...que los científicos están un poco pallá, ¿lo sabías?<br>
+                        
+                        ...y que los gatos tampoco son muy normales que digamos...<br><br>
+                        <h4>Big Van, científicos sobre ruedas</h4>
                     </div>
                 </div>
             </div>
-            <br style="color: white;">
-            <hr color="#db2d31"width=35%>
-            <div class="texto_titulo_mayor"><h1 style="text-align:center; margin-top: 50px;">Favorito del Mes</h1></div>    
-            <div class="fondo-contenido" style="background-image: url('images/fondo-favorito_mes.png');">
-                <div class="seccion-imagen-izquierda"><img src="images/libro_fav.png" alt="libro_fav"></div>
-                <div class="seccion-texto-derecha"><h3>Cómo explicar la física cuántica con un gato zombi</h3><hr color= "#db2d31" width="75px"><br>¿Sabías que el teletransporte es real? 
-                    ¿Que a veces un electrón tiene probabilidades de atravesar una pared? ¿Que dos partículas pueden influenciarse mutuamente aunque estén a años luz de distancia? 
-                    ¿Y que las partículas cuánticas son como Clark Kent y disimulan sus poderes cuando los científicos las están observando?<br><br>
-
-                    En Cómo explicar la física cuántica con un gato zombi descubrirás que, aunque no lo parezca, la física cuántica está por todas partes en nuestra vida cotidiana. Y además aprenderás...<br><br>
-                    
-                    ...¡los principios más locos y flipantes de la física cuántica!<br>
-                    
-                    ...¡experimentos low cost que puedes hacer en tu casa!<br>
-                    
-                    ...que los científicos están un poco pallá, ¿lo sabías?<br>
-                    
-                    ...y que los gatos tampoco son muy normales que digamos...<br><br>
-                    <h4>Big Van, científicos sobre ruedas</h4>
+            <div style="margin: 80px;" class="texto_titulo_mayor">
+                <hr color= "#db2d31" width="35%" style="margin:auto;">
+                <h1 style="text-align:center; margin-top: 50px;">Librerías Recomendadas</h1>
+            </div>
+            <div>
+                <div class="flex-container">
+                    <div class="logos-librerias"><a href="https://www.librenta.com/" target="_blank"><img src="images/L1.jpg" alt="Librenta Librería"></a></div>
+                    <div class="logos-librerias"><a href="https://www.cuspide.com/" target="_blank"><img src="images/L2.jpg" alt="Librería Cúspide"></a></div>
+                    <div class="logos-librerias"><a href="https://www.libreriahernandez.com/" target="_blank"><img src="images/L3.jpg" alt="Hernandez Librería"></a></div>
+                    <div class="logos-librerias"><a href="https://colecciones.clarin.com/" target="_blank"><img src="images/L4.jpg" alt="Colecciones Clarín"></a></div>
+                    <div class="logos-librerias"><a href="https://www.sbs.com.ar/" target="_blank"><img src="images/L5.jpg" alt="SBS Librería"></a></div>
                 </div>
             </div>
-        </div>
-
-        <div style="margin: 80px;" class="texto_titulo_mayor">
-            <hr color= "#db2d31" width="35%">
-            <h1 style="text-align:center; margin-top: 50px;">Librerías Recomendadas</h1>
-        </div>
-        <div>
-            <div class="flex-container" style="margin: 45px;">
-                <div class="logos-librerias"><a href="https://www.librenta.com/" target="_blank"><img src="images/L1.jpg" alt="Librenta Librería"></a></div>
-                <div class="logos-librerias"><a href="https://www.cuspide.com/" target="_blank"><img src="images/L2.jpg" alt="Librería Cúspide"></div>
-                <div class="logos-librerias"><a href="https://www.libreriahernandez.com/" target="_blank"><img src="images/L3.jpg" alt="Hernandez Librería"></div>
-                <div class="logos-librerias"><a href="https://colecciones.clarin.com/" target="_blank"><img src="images/L4.jpg" alt="Colecciones Clarín"></div>
-                <div class="logos-librerias"><a href="https://www.sbs.com.ar/" target="_blank"><img src="images/L5.jpg" alt="SBS Librería"></div>
-            </div>
-        </div>
-
-        <div id="footer" class="footer">
-            <table style="width: 100%;">
-                <tr>
-                    <th style="padding: 20px;">Nosotros</th>
-                    <th style="padding: 20px;">Explora</th>
-                    <th style="padding: 20px;">Categorías</th>
-                </tr>
-                <tr>
-                    <td rowspan="3"><img src="images/cafe-logo.png" alt="Loguito de Cafe" width="100" height="100"></td>
-                    <td class="fuente-14w color-dd">Novedades</td>
-                    <td class="fuente-14w color-dd">Ciencia Ficción</td>
-                </tr>
-                <tr>                  
-                    <td class="fuente-14w color-dd">Reseñas</td>
-                    <td class="fuente-14w color-dd">Romance</td>
-                </tr>
-                <tr>
-                    <td class="fuente-14w color-dd">Contacto</td>
-                    <td class="fuente-14w color-dd">Terror</td>
-                </tr>
-            </table>
-        </div>
+        </article>
+        <footer class="footer">
+            <div class="flex-container-footer">
+                <div><img src="images/ProyectoFinal.png" alt="Logo" width="140px" height="115px"></div>
+                <div><h3 style="color: white;">Explora</h3><br>
+                    <a href="" style="color: white;">Novedades</a><br>
+                    <a href="" style="color: white;">Reseñas</a><br>
+                    <a href="" style="color: white;">Contacto</a>
+                </div>
+                <div><h3 style="color: white;">Categorías</h3><br>
+                        <a href="" style="color: white;">Romance</a><br>
+                        <a href="" style="color: white;">Ciencia Ficción</a><br>
+                        <a href="" style="color: white;">Terror</a> 
+                </div>
+            </div>       
+        </footer>
     </body>
 </html>
