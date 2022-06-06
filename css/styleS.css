@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 /*Esqueleto general*/
 * {
@@ -252,7 +253,7 @@ display: table;
     right: 0;
 }
 
-/* Zona Libro Favorito*/
+/* Zona libro favorito*/
 
 .fondo-contenido {
     overflow: hidden;
@@ -324,4 +325,86 @@ display: table;
     align-content: center ;
 }
 
+/*Zona libros*/
 
+.flex-container-libros {
+    background-color: white;
+    border-radius: 15px;
+    border: solid 2px white;
+}
+
+.flex-container-libros > * {
+    border: solid 1px white;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.flex-container-libros {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center ;
+}
+
+/*Contenido de blogs*/
+
+.flex-container-blog {
+    background-color: white;
+    border-radius: 15px;
+    border: solid 2px white;
+    text-align: left;
+    font-weight:300;
+    font-size:smaller;
+}
+
+.flex-container-blog > * {
+    border: solid 1px white;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.flex-container-blog {
+    position: relative;
+    z-index: 2;
+    bottom: 100px;
+    width: 70%;
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start ;
+}
+
+/*Zona novedades*/
+
+.flex-container-nov {
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px white;
+    font-size: medium;
+    font-weight: 300;
+}
+
+.flex-container-nov > * {
+    padding: 10px;
+    margin: 5px;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.flex-container-nov {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center ;
+}
