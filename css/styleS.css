@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
+/*Color links*/
+
+.link-blanco {
+    color: white;
+}
+
 /*Esqueleto general*/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -180,17 +187,16 @@ div > a:hover {
     color:  #db2d31;   
 }
 
-
 /*Zona tres boxes*/
 
 .box {
 float: left;
-width: 32%;
+width: 31%;
 padding: 5px;
 height: 365px;
 background-repeat: no-repeat;
 background-size: cover;
-margin: 9px;
+margin: 15px;
 }
         
 .clearfix::after {
@@ -407,4 +413,119 @@ display: table;
     justify-content: center;
     align-items: center;
     align-content: center ;
+}
+
+/*Zona Contacto*/
+
+.flex-container-cont {
+    background-color: gainsboro;
+    border-radius: 20px;
+    border: solid 2px gainsboro;
+}
+
+.flex-container-cont > * {
+    padding: 30px;
+    margin: 30px;
+    border: solid 1px gainsboro;
+    border-radius: 15px;
+    background-color: gainsboro;
+}
+
+.flex-container-cont {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center ;
+}
+
+/*Error formulario*/
+
+.error {
+    border: 2px solid red;
+}
+
+/*Campos formulario*/
+
+.campo-fomr {
+    font-family: Sora; 
+    padding: 15px; 
+    margin: 5px; 
+    border-radius: 15px; 
+    width: 350px;
+}
+
+/*Boton Submit*/
+
+.boton-submit {
+    color: white; 
+    padding: 10px; 
+    margin: 5px; 
+    border: 0; 
+    border-radius: 15px; 
+    border-color: #db2d31;
+    width: 100px;
+    background-color: #db2d31;
+}
+
+.boton-submit:hover {
+    border-color: #e56568;
+    background-color: #e56568;
+}
+
+/*Cartel Incorrecto*/
+.flex-container-mal {
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px white;
+    color: red;
+}
+
+.flex-container-mal > * {
+    padding: 10px;
+    margin: 5px;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.flex-container-mal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center ;
+}
+
+/*Cartel Correcto*/
+
+.flex-container-bien {
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px white;
+    color: green;
+}
+
+.flex-container-bien > * {
+    padding: 10px;
+    margin: 5px;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.flex-container-bien {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center ;
+}
+
+#h:hover {
+    color: #db2d31;
+    cursor: pointer;
 }

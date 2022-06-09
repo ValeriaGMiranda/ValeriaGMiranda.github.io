@@ -11,7 +11,7 @@
         <header class="header">
             <div class="flex-container-header">
                 <div>
-                    <a href="" style= "color: white;"><h6>¡Suscríbete para más noticias!</h6></a><br>
+                    <a href="contacto.html" class="link-blanco"><h6>¡Suscríbete para más noticias!</h6></a><br>
                 </div>
                 <div>
                     <a href="https://www.facebook.com/" target="_blank"><img src="images/face.png" alt="facebook" width="25px" height="25px"></a>
@@ -30,21 +30,160 @@
             </div>
         </nav>
         <article class="main">
+            <div class="flex-container" >
+                <div style="margin: 20px;" class="texto_titulo_mayor">
+                    <hr color= "#db2d31" width="75%" style="margin:auto;">
+                    <h1 style="text-align:center; margin-top: 30px;">Contacto</h1>
+                </div>   
+            </div>
+            <div class="flex-container-cont">
+                <div>
+                    <img src="images/fraseContacto.jpg" alt="frase" width="400" height="400" style="border-radius: 20px;">
+                </div>
+                <div>
+                    <p><h2>¡Suscribete!</h2><br>
+                        Si deseas mantenerte al día sobre novedades literarias u ofertas <br> especiales de nuestras librerias amigas. <br><br>
+                    </p>
+                    <form name="formulario" id="formulario" onsubmit="return enviar()">
+                        <div>
+                            <input onfocus="quitarError(this)" type="text" name="nombre" id="nombre" placeholder="Nombre *" class="campo-fomr">
+                        </div>
+                        <div>
+                            <input onfocus="quitarError(this)" type="number" name="edad" id="edad" placeholder="Edad *" class="campo-fomr">
+                        </div>
+                        <div>
+                            <input onfocus="quitarError(this)" type="text" name="email" id="email" placeholder="Email *" class="campo-fomr">
+                        </div>
+                        <div>
+                            <input type="submit" value="Suscribirse" class="boton-submit">
+                        </div>
+                    </form>
+                </div>                
+            </div>
+            <div>
+                <div class="flex-container-mal">
+                    <ul id="lista_errores">
+                    </ul> 
+                </div>
+                <div class="flex-container-bien">
+                    <ul id="lista_suscritos">
+                    </ul>
+                </div>     
+            </div>
+           
+
+            <div>
+                <br>
+                <br>
+            </div>
         </article>
         <footer class="footer">
             <div class="flex-container-footer">
                 <div><img src="images/ProyectoFinal.png" alt="Logo" width="140px" height="115px"></div>
                 <div><h3 style="color: white;">Explora</h3><br>
-                    <a href="novedades.html" style="color: white;">Novedades</a><br>
-                    <a href="blog.html" style="color: white;">Reseñas</a><br>
-                    <a href="contacto.html" style="color: white;">Contacto</a>
+                    <a href="novedades.html" class="link-blanco">Novedades</a><br>
+                    <a href="blog.html" class="link-blanco">Reseñas</a><br>
+                    <a href="contacto.html" class="link-blanco">Contacto</a>
                 </div>
-                <div><h3 style="color: white;">Categorías</h3><br>
-                        <a href="" style="color: white;">Romance</a><br>
-                        <a href="" style="color: white;">Ciencia Ficción</a><br>
-                        <a href="" style="color: white;">Terror</a> 
+                <div><h3 style="color: white;">Sobre Nosotros</h3><br>
+                    <p style="font-size: 15px; color: white;"> "Code Book - Proyecto Final" es un <br>
+                        pequeño trabajo para la materia <br> 
+                        Programación Web 1 realizado <br>
+                        por <span id="h">Valeria Gisel Miranda</span> .
+                    </p>
                 </div>
             </div>       
-        </footer>
+        </footer>        
+        <script>
+            let lta_errores = document.getElementById("lista_errores");
+            let lta_suscritos = document.getElementById("lista_suscritos");
+
+            function enviar(){
+
+                if(validar()){
+                    let nombre = document.formulario.nombre;
+                    let edad = document.formulario.edad;
+                    let email = document.formulario.email;
+        
+                    let li = document.createElement("li");
+                    li.innerHTML = nombre.value + " de " + edad.value + " años de edad se suscribió con el email " + email.value;
+                    lta_suscritos.appendChild(li);    
+
+                    //Limpio Campos Formulario
+                    nombre.value = '';
+                    edad.value = '';
+                    email.value = '';
+
+                    return false;
+                }
+
+                return false;
+            }
+
+            function validar(){
+                let errores = [];
+
+                let nombre = document.formulario.nombre.value.trim();
+                let edad = document.formulario.edad.value.trim();
+                let email = document.formulario.email.value.trim();
+
+                //Valido Nombre
+                if(nombre == ""){
+                    errores.push("El nombre no puede estar vacio");
+                    document.formulario.nombre.classList.add('error');
+                }
+                else{
+                      if(nombre.length > 20){
+                        errores.push("El nombre no puede contener mas de 20 caracteres");
+                        document.formulario.nombre.classList.add('error');
+                      }  
+                }
+
+                //Valido Edad
+                if(edad  == ""){
+                    errores.push("La edad no puede estar vacia");
+                    document.formulario.edad.classList.add('error');
+                }else{
+                    if(edad  < 18){
+                        errores.push("La edad no puede ser menor a 18 años");
+                        document.formulario.edad.classList.add('error');
+                    }  
+
+                    if(edad  > 99){
+                        errores.push("La edad no puede ser mayor a 99 años");
+                        document.formulario.edad.classList.add('error');
+                    }      
+
+                }
+
+                //Valido Email
+                if(email.length <= 0){   
+                    errores.push("El email no puede estar vacio");
+                    document.formulario.email.classList.add('error');
+                }else {
+                    var re = /\S+@\S+\.\S+/;
+            
+                    if(!re.test(email)){
+                        errores.push("El email indicado no tiene el formato correcto");
+                        document.formulario.email.classList.add('error');
+                    } 
+
+                }
+
+                lta_errores.innerHTML= "";
+                errores.forEach(x => {
+                    let li = document.createElement("li");
+                    li.innerHTML = x;
+                    lta_errores.appendChild(li);
+                });
+
+                return errores.length <= 0;
+
+            }
+
+            function quitarError(objeto){
+                objeto.classList.remove('error');
+            }
+        </script>
     </body>
 </html>
